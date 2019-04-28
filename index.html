@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart.js</title>
+    <style media="screen">
+      #container {
+	         min-width: 310px;
+	         max-width: 800px;
+	         height: 400px;
+	         margin: 0 auto
+}
+    </style>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+  </head>
+  <body>
+    <div id="container">
+    </div>
+
+    <script type="text/javascript">
+   Highcharts.chart('container', {
+          chart: {
+              type: 'line'
+          },
+          title: {
+              text: 'Facebook Daily Use'
+          },
+          xAxis: {
+              categories: ['Monday', 'Tuesday', 'Wednesday', "Thursday", "Friday", "Saturday", "Sunday"]
+          },
+          yAxis: {
+              title: {
+                  text: 'Hours per day'
+              }
+          },
+          series: [{
+              name: 'Huyen',
+              data: [1, 0, 4, 2, 3, 2,2]
+
+          }]
+      });
+
+    </script>
+  </body>
+</html>
